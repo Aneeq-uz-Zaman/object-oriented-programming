@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build and Run program",  // Make sure this label matches the one in launch.json
+            "command": "C:\\MinGW\\bin\\g++.exe",  // Path to your g++ compiler
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "*.cpp",
+                "-o",
+                "${fileDirname}\\main.exe"  // Output filename, adjust if necessary
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build the program"
+        }
+    ]
+}
